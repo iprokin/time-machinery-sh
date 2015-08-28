@@ -1,0 +1,6 @@
+[Unit]
+Description=rsnapshot.sh backup
+
+[Service]
+Type=oneshot
+ExecStart=/home/ilya/WHERE_I_STORE_SCRIPTS/rsnapshot.sh

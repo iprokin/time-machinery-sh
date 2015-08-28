@@ -1,0 +1,10 @@
+[Unit]
+Description=rsnapshot.sh backup
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=10m 
+#Unit=rsnapshot-sh.service
+
+[Install]
+WantedBy=timers.target
