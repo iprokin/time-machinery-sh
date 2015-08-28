@@ -18,7 +18,7 @@ Here each subfolder corresponds to a snapshot of your HOME<br><br>
 <h2>Running it periodically</h2>
 To run backups periodically you could use 1) systemd (if you have it) 2) cron, or 3) plain bash.<br>
 <br>
-<h3>1) systemd (if you have OS X skip it and go to 2-3)</h3>
+<h3>1) systemd (if you have OS X or a system without systemd skip this part and go to 2-3)</h3>
 With systemd, edit rsnapshot-sh.timer and rsnapshot-sh.service and put them to a folder for User level of systemd. I use 
 /home/YOURUSER/.config/systemd/user/<br>
 Then you enable and run timer unit with:<br>
