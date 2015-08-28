@@ -2,7 +2,7 @@
 <b>rsnapshot.sh</b> is a very simple shell script to do backups similarly to "Back In Time" or Apple's "Time Machine"; <b>teletime.sh</b> is a complementary simple script to run programs "in the past" meaning setting environmental variables so that programs see your backed up HOME folder instead of your actual one.
 
 <h1>rsnapshot.sh</h1>
-<b>rsnapshot.sh</b> backups to your location of choice. It uses rsync and cp.<br>
+<b>rsnapshot.sh</b> backups to your location of choice, e.g. your HOME folder. It uses rsync and cp.<br>
 Go ahead and install rsync. Edit parameters in rsnapshot.sh, apply "chmod +x rsnapshot.sh" and run the script. Now you have nice little backup system.<br>
 <br>
 Running it each 10 minutes will produce subfolders inside your backup folder, example:
