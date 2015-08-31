@@ -3,7 +3,7 @@
 
 <h1>rsnapshot.sh</h1>
 <b>rsnapshot.sh</b> backups to your location of choice, e.g. your HOME folder. It uses rsync and cp.<br>
-Go ahead and install rsync. Edit parameters in rsnapshot.sh, apply "chmod +x rsnapshot.sh" and run the script. Now you have nice little backup system.<br>
+Go ahead and install rsync (you probably already have it). Edit parameters in rsnapshot.sh, apply "chmod +x rsnapshot.sh" and run the script. Now you have nice little backup system.<br>
 <br>
 Running it each 10 minutes will produce subfolders inside your backup folder, example:
 <pre>
