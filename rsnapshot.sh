@@ -13,7 +13,7 @@ SRC="/home/ilya/" #dont forget trailing slash!
 SNAP="/run/media/ilya/BACKUPHDDNAME/backup/ilya"
 OPTS="-rltgoi --delay-updates --delete --chmod=a-w"
 MINCHANGES=20
-DATEFORMAT="+%Y-%m-%d-%H:%M"
+DATEFORMAT="+%Y-%m-%d--%H-%M"
 
 
 if [ -d "$SNAP" ] ; then
