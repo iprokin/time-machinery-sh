@@ -1,8 +1,8 @@
 # time-machinery-sh
-<b>rsnapshot.sh</b> is a very simple shell script to do backups similarly to "Back In Time" or Apple's "Time Machine"; <b>teletime.sh</b> is a complimentary simple script to run programs "in the past" meaning setting environmental variables so that programs see your backed up HOME folder instead of your actual one.
+<b>rsnapshot.sh</b> is a very simple shell script to do backups similarly to "Back In Time" or Apple's "Time Machine"; <b>teletime.sh</b> is a complementary simple script to run programs "in the past" meaning setting environmental variables so that programs see your backed up HOME folder instead of your actual one.
 
 <h1>rsnapshot.sh</h1>
-<b>rsnapshot.sh</b> backups to your location of choice. It uses rsync and cp.<br>
+<b>rsnapshot.sh</b> backups to your location of choice, e.g. your HOME folder. It uses rsync and cp.<br>
 Go ahead and install rsync. Edit parameters in rsnapshot.sh, apply "chmod +x rsnapshot.sh" and run the script. Now you have nice little backup system.<br>
 <br>
 Running it each 10 minutes will produce subfolders inside your backup folder, example:
@@ -18,9 +18,9 @@ Here each subfolder corresponds to a snapshot of your HOME<br><br>
 <h2>Running it periodically</h2>
 To run backups periodically you could use 1) systemd (if you have it) 2) cron, or 3) plain bash.<br>
 <br>
-<h3>1) systemd (if you have OS X skip it and go to 2-3)</h3>
+<h3>1) systemd (if you have OS X or a system without systemd skip this part and go to 2-3)</h3>
 With systemd, edit rsnapshot-sh.timer and rsnapshot-sh.service and put them to a folder for User level of systemd. I use
-/home/YOURUSER/.config/systemd/user/<br>
+/home/YOURUSER/.config/systemd/user/.<br>
 Then you enable and run timer unit with:<br>
 <pre>
 systemctl --user enable rsnapshot-sh.timer
