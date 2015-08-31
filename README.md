@@ -7,11 +7,11 @@ Go ahead and install rsync. Edit parameters in rsnapshot.sh, apply "chmod +x rsn
 <br>
 Running it each 10 minutes will produce subfolders inside your backup folder, example:
 <pre>
-2015-08-28-18:25
-2015-08-28-18:36
-2015-08-28-18:47
-2015-08-28-18:57
-2015-08-28-19:08
+2015-08-28--18-25
+2015-08-28--18-36
+2015-08-28--18-47
+2015-08-28--18-57
+2015-08-28--19-08
 latest
 </pre>
 Here each subfolder corresponds to a snapshot of your HOME<br><br>
@@ -19,7 +19,7 @@ Here each subfolder corresponds to a snapshot of your HOME<br><br>
 To run backups periodically you could use 1) systemd (if you have it) 2) cron, or 3) plain bash.<br>
 <br>
 <h3>1) systemd (if you have OS X skip it and go to 2-3)</h3>
-With systemd, edit rsnapshot-sh.timer and rsnapshot-sh.service and put them to a folder for User level of systemd. I use 
+With systemd, edit rsnapshot-sh.timer and rsnapshot-sh.service and put them to a folder for User level of systemd. I use
 /home/YOURUSER/.config/systemd/user/<br>
 Then you enable and run timer unit with:<br>
 <pre>
@@ -36,7 +36,7 @@ To run it each 10 minutes (60*10=600 seconds) do
 <pre>
 watch -n 600 ./rsnapshot.sh
 </pre>
-or 
+or
 <h4>using loop and sleep</h4>
 <pre>
 while true; do ./rsnapshot.sh; sleep 600; done
@@ -45,11 +45,15 @@ while true; do ./rsnapshot.sh; sleep 600; done
 To run programs in modified environment so backed up HOME folder appears as actual one to them.<br>
 Tricking python:
 <pre>
-bash teletime.sh 2015-08-28-00:59 python
+bash teletime.sh 2015-08-28--00-59 python
 </pre>
 Tricking bash:
 <pre>
-bash teletime.sh 2015-08-28-00:59 bash
+bash teletime.sh 2015-08-28--00-59 bash
+</pre>
+Tricking ipython notebook:
+<pre>
+bash teletime.sh 2015-08-28--00-59 'cd ~/YourPathTo/FolderOfChoice && ipython notebook'
 </pre>
 <h1>References</h1>
 <a href="https://wiki.archlinux.org/index.php/Rsync">https://wiki.archlinux.org/index.php/Rsync</a><br>
