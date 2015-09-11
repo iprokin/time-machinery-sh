@@ -27,7 +27,7 @@ systemctl --user enable rsnapshot-sh.timer
 systemctl --user start rsnapshot-sh.timer
 </pre>
 <h3>2) cron</h3>
-Install cron and add crontab
+Install <a href="https://en.wikipedia.org/wiki/Cron">cron</a> and add crontab
 <pre>crontab -e</pre>
 <h3>3) Plain bash</h3>
 This could be usefull if you plan to run periodical backups only occasinally e.g. when you code and want to track versions without using versioning systems or if you cannot install cron.<br>
