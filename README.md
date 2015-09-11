@@ -30,7 +30,7 @@ systemctl --user start rsnapshot-sh.timer
 Install <a href="https://en.wikipedia.org/wiki/Cron">cron</a> and add crontab
 <pre>crontab -e</pre>
 <h3>3) Plain bash</h3>
-This could be usefull if you plan to run periodical backups only occasinally e.g. when you code and want to track versions without using versioning systems or if you cannot install cron.<br>
+This could be usefull if you plan to run periodical backups only occasinally e.g. only when you code and want to track versions without using versioning systems or if you cannot install cron.<br>
 <h4>using watch</h4>
 To run it each 10 minutes (60*10=600 seconds) do
 <pre>
