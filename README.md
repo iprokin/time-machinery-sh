@@ -55,6 +55,12 @@ Tricking ipython notebook:
 <pre>
 bash teletime.sh 2015-08-28--00-59 'cd ~/YourPathTo/FolderOfChoice && ipython notebook'
 </pre>
+
+You could easily search various things in your logs. For instance, you might want to search for all deleted files with:
+<pre>
+grep "*deleting   " /run/media/ilya/BACKUPHDDNAME/backup/ilya/*/rsync.log
+</pre>
+
 <h1>References</h1>
 <a href="https://wiki.archlinux.org/index.php/Rsync">https://wiki.archlinux.org/index.php/Rsync</a><br>
 <a href="https://wiki.archlinux.org/index.php/Cron">https://wiki.archlinux.org/index.php/Cron</a><br>
